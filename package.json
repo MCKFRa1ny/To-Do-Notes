@@ -1,0 +1,14 @@
+{
+  "name": "todo-notes-app",
+  "version": "1.0.0",
+  "description": "Prosta aplikacja ToDo Notes",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager . todo-notes-app --platform=win32 --arch=x64 --icon=icon.ico --out=dist --overwrite"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-packager": "^17.1.1"
+  }
+}

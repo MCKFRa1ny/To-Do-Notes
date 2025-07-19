@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo Notes</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+    button { margin-right: 10px; }
+    input[type="text"] { padding: 5px; }
+    .task { display: flex; justify-content: space-between; padding: 5px; border-bottom: 1px solid #ddd; }
+    .task.done { text-decoration: line-through; color: green; }
+    .task.in-progress { color: orange; }
+    #tasks { margin-top: 20px; }
+    #notesList { margin-top: 10px; }
+    .note-switcher { cursor: pointer; margin-right: 5px; padding: 5px; background: #eee; border-radius: 5px; }
+    .note-switcher.active { background: #ccc; }
+  </style>
+</head>
+<body>
+
+  <h1>📝 ToDo Notes</h1>
+  <div>
+    <button onclick="createNote()">Stwórz</button>
+    <input type="text" id="joinId" placeholder="ID notesiku">
+    <button onclick="joinNote()">Dołącz</button>
+  </div>
+
+  <div id="notesList"></div>
+  <div id="currentNoteId" style="margin-top: 10px;"></div>
+
+  <input type="text" id="newTask" placeholder="Nowe zadanie">
+  <button onclick="addTask()">Dodaj</button>
+
+  <div id="tasks"></div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
